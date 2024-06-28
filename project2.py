@@ -3,11 +3,12 @@ import cv2 as cv
 
 cap = cv.VideoCapture('IMG_2507.MOV')
 
-# Parameters for ShiTomasi corner detection
+# Parameters for lucas kanade optical flow
 lk_params = dict(winSize=(15, 15),
                  maxLevel=2,
                  criteria=(cv.TERM_CRITERIA_EPS | cv.TERM_CRITERIA_COUNT, 10, 0.02))
 
+# Parameters for ShiTomasi corner detection
 feature_params = dict(maxCorners=20,
                       qualityLevel=0.2,
                       minDistance=20,
